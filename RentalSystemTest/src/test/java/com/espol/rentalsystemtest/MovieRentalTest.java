@@ -34,7 +34,7 @@ public class MovieRentalTest {
     
     @Before
     public void setUp() {
-        hulk = new Movie("Mulan", Movie.CHILDRENS);
+        hulk = new Movie("hulk", Movie.CHILDRENS);
         hulkrental = new MovieRental(hulk,4);
     }
     

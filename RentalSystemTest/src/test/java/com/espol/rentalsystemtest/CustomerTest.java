@@ -72,7 +72,7 @@ public class CustomerTest {
     @Test
     public void testChildrenMovieStatementLessThan3() {
         System.out.println("Prueba de un Statement para películas Infantiles Rentadas menos de 3 días");
-        System.out.println("Película: Mulán. Categoría: Childrens. Días Rentados: 2");
+        System.out.println("Película: hulk. Categoría: Childrens. Días Rentados: 2");
         MarkRuffo.addMovieRental(Hulkrented);
         String expResult = "Rental Record for " + MarkRuffo.getName() + "\n";
         
@@ -96,17 +96,17 @@ public class CustomerTest {
     @Test
     public void testChildrenMovieStatementMoreThan3() {
         System.out.println("Prueba de un Statement para películas Infantiles Rentadas más de 3 días");
-        System.out.println("Película: Mulán. Categoría: Childrens. Días Rentados: 10");
+        System.out.println("Película: hulk. Categoría: Childrens. Días Rentados: 10");
         
-        MovieRental mulanrented10 = new MovieRental(new Movie("Mulan",Movie.CHILDRENS),10);
-        MarkRuffo.addMovieRental(mulanrented10);
+        MovieRental hulkrented10 = new MovieRental(new Movie("Mulan",Movie.CHILDRENS),10);
+        MarkRuffo.addMovieRental(hulkrented10);
         String expResult = "Rental Record for " + MarkRuffo.getName() + "\n";
         
         double amount = 1.5;
-        amount += (mulanrented10.getDaysRented()-3)*1.25;
+        amount += (hulkrented10.getDaysRented()-3)*1.25;
         int frequentRenterPoints = 1;
         
-        expResult += "\t" + mulanrented10.getMovie()._title+ "\t"
+        expResult += "\t" + hulkrented10.getMovie()._title+ "\t"
                     + String.valueOf(amount) + "\n";
         expResult += "Amount owed is " + String.valueOf(amount) + "\n";
         expResult += "You earned " + String.valueOf(frequentRenterPoints)
@@ -119,8 +119,8 @@ public class CustomerTest {
     @Test
     public void testStatementRegularMovieOnly() {
         System.out.println("Prueba de un Statement para películas regulares");
-        Movie titanic = new Movie("Titanic", Movie.REGULAR);
-        MovieRental mv = new MovieRental(titanic,3);
+        Movie interestellar = new Movie("Interestellar", Movie.REGULAR);
+        MovieRental mv = new MovieRental(interestellar,3);
         MarkRuffo.addMovieRental(mv);
         
         String expResult = "Rental Record for " + MarkRuffo.getName() + "\n";
@@ -144,7 +144,7 @@ public class CustomerTest {
     @Test
     public void testStatementNewReleaseOnly() {
         System.out.println("Prueba de un Statement para películas Recién Estrenadas");
-        Movie spiderman = new Movie("Spiderman: No Way Home", Movie.NEW_RELEASE);
+        Movie spiderman = new Movie("Spiderman", Movie.NEW_RELEASE);
         MovieRental mv = new MovieRental(spiderman,3);
         MarkRuffo.addMovieRental(mv);
         

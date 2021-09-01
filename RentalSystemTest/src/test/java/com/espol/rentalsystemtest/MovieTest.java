@@ -33,9 +33,9 @@ public class MovieTest {
     
     @Before
     public void setUp() {
-        avengers = new Movie("The Man Who Knew Too Much", Movie.REGULAR);
-        hulk = new Movie("Mulan", Movie.CHILDRENS);
-        thor = new Movie("Slumdog Millionaire", Movie.NEW_RELEASE);
+        avengers = new Movie("avengers", Movie.REGULAR);
+        hulk = new Movie("hulk", Movie.CHILDRENS);
+        thor = new Movie("thor", Movie.NEW_RELEASE);
     }
     
     @After
